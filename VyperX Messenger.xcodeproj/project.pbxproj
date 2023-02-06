@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		49C9CC0FC1D16FF27ABB7675 /* Pods_VyperX_Messenger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17BBF5C1701A04F394A2CAE3 /* Pods_VyperX_Messenger.framework */; };
+		6E161BE32991A19000DE5F4A /* ContatosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E161BE22991A19000DE5F4A /* ContatosViewController.swift */; };
 		6E21D01C2990916500553F65 /* AjustesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E21D01B2990916500553F65 /* AjustesViewController.swift */; };
 		6E70FBA52990314B0084CB71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E70FBA42990314B0084CB71 /* AppDelegate.swift */; };
 		6E70FBA72990314B0084CB71 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E70FBA62990314B0084CB71 /* SceneDelegate.swift */; };
@@ -15,12 +16,15 @@
 		6E70FBAE2990314C0084CB71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E70FBAD2990314C0084CB71 /* Assets.xcassets */; };
 		6E70FBB12990314C0084CB71 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E70FBAF2990314C0084CB71 /* LaunchScreen.storyboard */; };
 		6E70FBB9299032A30084CB71 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6E70FBB8299032A30084CB71 /* GoogleService-Info.plist */; };
+		6E78626C2992853700071B31 /* CadastroContatoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E78626B2992853700071B31 /* CadastroContatoViewController.swift */; };
 		6E7DF94C29904B9A009D91D9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7DF94B29904B9A009D91D9 /* LoginViewController.swift */; };
 		6E7DF94E29904BD2009D91D9 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7DF94D29904BD2009D91D9 /* RegisterViewController.swift */; };
+		6EC71A2529919C92007BF096 /* ContatoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC71A2429919C92007BF096 /* ContatoTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		17BBF5C1701A04F394A2CAE3 /* Pods_VyperX_Messenger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VyperX_Messenger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E161BE22991A19000DE5F4A /* ContatosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContatosViewController.swift; sourceTree = "<group>"; };
 		6E21D01B2990916500553F65 /* AjustesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AjustesViewController.swift; sourceTree = "<group>"; };
 		6E2AC2C529907A6A003BAD06 /* VyperX Messenger.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "VyperX Messenger.entitlements"; sourceTree = "<group>"; };
 		6E70FBA12990314B0084CB71 /* VyperX Messenger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VyperX Messenger.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -31,8 +35,10 @@
 		6E70FBB02990314C0084CB71 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6E70FBB22990314C0084CB71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6E70FBB8299032A30084CB71 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		6E78626B2992853700071B31 /* CadastroContatoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastroContatoViewController.swift; sourceTree = "<group>"; };
 		6E7DF94B29904B9A009D91D9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		6E7DF94D29904BD2009D91D9 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		6EC71A2429919C92007BF096 /* ContatoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContatoTableViewCell.swift; sourceTree = "<group>"; };
 		8537017677786CC432FD4150 /* Pods-VyperX Messenger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VyperX Messenger.debug.xcconfig"; path = "Target Support Files/Pods-VyperX Messenger/Pods-VyperX Messenger.debug.xcconfig"; sourceTree = "<group>"; };
 		AF0C67CDD7F489EF4A984912 /* Pods-VyperX Messenger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VyperX Messenger.release.xcconfig"; path = "Target Support Files/Pods-VyperX Messenger/Pods-VyperX Messenger.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -70,6 +76,8 @@
 			isa = PBXGroup;
 			children = (
 				6E21D01B2990916500553F65 /* AjustesViewController.swift */,
+				6E161BE22991A19000DE5F4A /* ContatosViewController.swift */,
+				6E78626B2992853700071B31 /* CadastroContatoViewController.swift */,
 			);
 			path = Tabs;
 			sourceTree = "<group>";
@@ -111,11 +119,20 @@
 		6E7DF94F29904C49009D91D9 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				6EC71A2329919C50007BF096 /* TableViewCell */,
 				6E21D01A2990914A00553F65 /* Tabs */,
 				6E7DF94B29904B9A009D91D9 /* LoginViewController.swift */,
 				6E7DF94D29904BD2009D91D9 /* RegisterViewController.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		6EC71A2329919C50007BF096 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				6EC71A2429919C92007BF096 /* ContatoTableViewCell.swift */,
+			);
+			path = TableViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,11 +251,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6EC71A2529919C92007BF096 /* ContatoTableViewCell.swift in Sources */,
+				6E161BE32991A19000DE5F4A /* ContatosViewController.swift in Sources */,
 				6E7DF94C29904B9A009D91D9 /* LoginViewController.swift in Sources */,
 				6E21D01C2990916500553F65 /* AjustesViewController.swift in Sources */,
 				6E70FBA52990314B0084CB71 /* AppDelegate.swift in Sources */,
 				6E70FBA72990314B0084CB71 /* SceneDelegate.swift in Sources */,
 				6E7DF94E29904BD2009D91D9 /* RegisterViewController.swift in Sources */,
+				6E78626C2992853700071B31 /* CadastroContatoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
