@@ -43,7 +43,8 @@ class RegisterViewController: UIViewController {
                                     .document(idUsuario)
                                     .setData([
                                         "nome" : nome,
-                                        "email" : email
+                                        "email" : email,
+                                        "id": idUsuario
                                     ])
                             }
                             
@@ -65,6 +66,8 @@ class RegisterViewController: UIViewController {
         }
         
         
+       
+        
     }
     
     
@@ -72,5 +75,10 @@ class RegisterViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.setNavigationBarHidden(false, animated: true)
     }
+ 
+    
     
 }
+
+
+

@@ -1,0 +1,6 @@
+framework module Pods_VyperX_Messenger {
+  umbrella header "Pods-VyperX Messenger-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -47,12 +47,13 @@ class LoginViewController: UIViewController {
                 
                 auth.signIn(withEmail: email, password: senha) { (usuario, erro) in
                     
+                    
                     if erro == nil {
                         if let usuarioLogado = usuario {
                             print("Sucesso ao logar usuario! \(String(describing:usuarioLogado.user.email)) ")
                         }
                     }else {
-                        print("Erro ao autenticar usuario!")
+                       print("Erro ao realizar validação")
                     }
                 }
                 
@@ -66,6 +67,10 @@ class LoginViewController: UIViewController {
         }
         
     }
+    
+    
+    
+    
     
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.setNavigationBarHidden(true, animated: true)
