@@ -17,6 +17,8 @@
 		6E70FBB12990314C0084CB71 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E70FBAF2990314C0084CB71 /* LaunchScreen.storyboard */; };
 		6E70FBB9299032A30084CB71 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6E70FBB8299032A30084CB71 /* GoogleService-Info.plist */; };
 		6E78626C2992853700071B31 /* CadastroContatoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E78626B2992853700071B31 /* CadastroContatoViewController.swift */; };
+		6E795C8E299D931A00525F04 /* ConversasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E795C8D299D931A00525F04 /* ConversasViewController.swift */; };
+		6E795C90299D967E00525F04 /* ConversaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E795C8F299D967E00525F04 /* ConversaTableViewCell.swift */; };
 		6E7DF94C29904B9A009D91D9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7DF94B29904B9A009D91D9 /* LoginViewController.swift */; };
 		6E7DF94E29904BD2009D91D9 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7DF94D29904BD2009D91D9 /* RegisterViewController.swift */; };
 		6E8A000A29952D1000A94E37 /* MensagensViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8A000929952D1000A94E37 /* MensagensViewController.swift */; };
@@ -38,6 +40,8 @@
 		6E70FBB22990314C0084CB71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6E70FBB8299032A30084CB71 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6E78626B2992853700071B31 /* CadastroContatoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastroContatoViewController.swift; sourceTree = "<group>"; };
+		6E795C8D299D931A00525F04 /* ConversasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversasViewController.swift; sourceTree = "<group>"; };
+		6E795C8F299D967E00525F04 /* ConversaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversaTableViewCell.swift; sourceTree = "<group>"; };
 		6E7DF94B29904B9A009D91D9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		6E7DF94D29904BD2009D91D9 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		6E8A000929952D1000A94E37 /* MensagensViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MensagensViewController.swift; sourceTree = "<group>"; };
@@ -81,6 +85,7 @@
 			children = (
 				6E21D01B2990916500553F65 /* AjustesViewController.swift */,
 				6E161BE22991A19000DE5F4A /* ContatosViewController.swift */,
+				6E795C8D299D931A00525F04 /* ConversasViewController.swift */,
 			);
 			path = Tabs;
 			sourceTree = "<group>";
@@ -106,7 +111,6 @@
 		6E70FBA32990314B0084CB71 /* VyperX Messenger */ = {
 			isa = PBXGroup;
 			children = (
-				6E8A000D29956DEB00A94E37 /* Model */,
 				6EC71A2329919C50007BF096 /* TableViewCell */,
 				6E7DF94F29904C49009D91D9 /* ViewController */,
 				6E70FBA42990314B0084CB71 /* AppDelegate.swift */,
@@ -145,6 +149,8 @@
 			children = (
 				6EC71A2429919C92007BF096 /* ContatoTableViewCell.swift */,
 				6E8A000B2995569B00A94E37 /* MensagensTableViewCell.swift */,
+				6E795C8F299D967E00525F04 /* ConversaTableViewCell.swift */,
+				6E8A000D29956DEB00A94E37 /* Model */,
 			);
 			path = TableViewCell;
 			sourceTree = "<group>";
@@ -266,6 +272,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				6EC71A2529919C92007BF096 /* ContatoTableViewCell.swift in Sources */,
+				6E795C8E299D931A00525F04 /* ConversasViewController.swift in Sources */,
+				6E795C90299D967E00525F04 /* ConversaTableViewCell.swift in Sources */,
 				6E161BE32991A19000DE5F4A /* ContatosViewController.swift in Sources */,
 				6E7DF94C29904B9A009D91D9 /* LoginViewController.swift in Sources */,
 				6E8A000C2995569C00A94E37 /* MensagensTableViewCell.swift in Sources */,

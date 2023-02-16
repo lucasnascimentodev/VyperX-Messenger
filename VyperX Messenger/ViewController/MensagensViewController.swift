@@ -23,6 +23,8 @@ class MensagensViewController: UIViewController, UITableViewDelegate, UITableVie
     var contato: Dictionary <String, Any>!
     var mensagemListener: ListenerRegistration!
     var imagePicker = UIImagePickerController ()
+    var nomeContato: String!
+    var urlFotoContato: String!
 
 
     var auth: Auth!
@@ -49,13 +51,18 @@ class MensagensViewController: UIViewController, UITableViewDelegate, UITableVie
         }
         
         // Configura titulo da tela
-        if let nome = contato ["nome"] {
-            self.navigationItem.title = nome as? String
+        if let nome = contato["nome"] {
+            nomeContato = nome as? String
+            self.navigationItem.title = nomeContato
+        }
+        
+        if let url = contato["urlImagem"] as? String {
+            urlFotoContato = url
         }
         
         // Configurações tableView
         tableViewMensagens.separatorStyle = .none
-        tableViewMensagens.backgroundView = UIImageView(image: UIImage(named:"bg") )
+       
 
         // Configurações lista de mensagens
         //listaMensagens = ["Olá tudo bem ?", "Tudo otimo", "Estou precisando falar urgente com você, sera que você poderia ir na farmacia para mim comprar alguns medicamentos ? Estou bastante doente", "Claro, quais ?", "Um amoxilina, paracetamol e um cinegripe", "ok", "Muitissimo obrigado!", "Estamos juntos !"]
@@ -136,7 +143,7 @@ class MensagensViewController: UIViewController, UITableViewDelegate, UITableVie
                 
                 if erro == nil {
                     print("Sucesso ao realizar upload da img")
-                    imagemMensagemRef.downloadURL { url, erro in
+                    imagemMensagemRef.downloadURL { [self] url, erro in
                         if let urlImagem = url?.absoluteString {
                             
                             if let idUsuarioDestinatario = self.contato ["id"] as? String {
@@ -152,6 +159,22 @@ class MensagensViewController: UIViewController, UITableViewDelegate, UITableVie
                                 
                                 // Salvando mensagem destinatario
                                 self.salvarMensagem(idRemetente: idUsuarioDestinatario, idDestinatario: self.idUsuarioLogado, mensagem: mensagem)
+                                
+                                let conversa:Dictionary<String, Any> = [
+                                    "idRemetente" : idUsuarioLogado!,
+                                    "idDestinatario" : idUsuarioDestinatario,
+                                    "ultimaMensagem" : "imagem..."
+                                    ]
+                                
+                                conversa["nomeUsuario"] = self.nomeContato!
+                                conversa["urlFotoUsuario"] = self.urlfotoContato!
+
+                                
+                                // Salvando conversa para remetente
+                                salvarConversa(idRemetente: idUsuarioLogado, idDestinatario: idUsuarioDestinatario, conversa: conversa)
+                                // Salvando conversa para destinatario
+                                salvarConversa(idRemetente: idUsuarioDestinatario, idDestinatario: idUsuarioLogado, conversa: conversa)
+                            
                                 
                             }
                             
@@ -187,11 +210,35 @@ class MensagensViewController: UIViewController, UITableViewDelegate, UITableVie
                     // Salvando mensagem destinatario
                     salvarMensagem(idRemetente: idUsuarioDestinatario, idDestinatario: idUsuarioLogado, mensagem: mensagem)
                     
+                    let conversa:Dictionary<String, Any> = [
+                        "idRemetente" : idUsuarioLogado!,
+                        "idDestinatario" : idUsuarioDestinatario,
+                        "ultimaMensagem" : textoDigitado,
+                        "nomeUsuario" : nomeContato!,
+                        "urlFotoUsuario" : urlFotoContato!,
+                        "tipo" : "texto"
+                    ]
+                    
+                    // Salvando conversa para remetente
+                    salvarConversa(idRemetente: idUsuarioLogado, idDestinatario: idUsuarioDestinatario, conversa: conversa)
+                    // Salvando conversa para destinatario
+                    salvarConversa(idRemetente: idUsuarioDestinatario, idDestinatario: idUsuarioLogado, conversa: conversa)
+
+
+                    
                 }
                 
             }
         }
         
+    }
+    
+    func salvarConversa(idRemetente: String, idDestinatario: String, conversa: Dictionary<String, Any> )  {
+        db.collection("conversas")
+            .document(idRemetente)
+            .collection("ultima_conversa")
+            .document(idDestinatario)
+            .setData(conversa)
     }
     
     func salvarMensagem(idRemetente: String, idDestinatario: String, mensagem: Dictionary<String, Any>) {
